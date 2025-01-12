@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swikrit</title>
+
+  <!-- Add favicon -->
+  <link rel="icon" type="image/png" href="assets/letter-s.png">
+  
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,700" rel="stylesheet">
+</head>
+<body>
+  <!-- Three.js Background Container -->
+  <div id="hero-background">
+    <canvas class="hero-canvas"></canvas>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <button class="menu-toggle" id="menu-toggle">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      <ul class="main-nav" id="main-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="hero-image">
+            <div class="hero-shape"></div>
+            <div class="profile-img">
+              <img src="assets/first_img.jpeg" alt="Profile Image">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-text">
+            <h1><span>Hi, I am</span><br>Swikrit Bhattarai</h1>
+            <h3>Software Developer | Computer Science Student</h3>
+            <a href="assets/resume.pdf" class="btn btn-lg btn-primary" target="_blank">View Resume</a>
+            <h3 class="connect-heading">Connect with me</h3>
+            <ul class="social-links">
+              <li><a href="https://github.com/Swikritbh/Swikritbh" target="_blank"><img src="assets/github.png"></a></li>
+              <li><a href="https://www.linkedin.com/in/swikrit-bhattarai-bb29ba289/" target="_blank"><img src="assets/icon.png" alt="Social Media"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="sub-heading">Get to Know Me</p>
+        <h1 class="heading">About Me</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <div class="about-content">
+            <p class="about-text">
+              I am Swikrit Bhattarai, a senior at the University of Louisiana at Monroe, pursuing a Bachelor's degree in Computer Science. As an international student from Nepal, I bring a unique global perspective, coupled with strong communication skills, a dynamic approach, and a commitment to excellence in both academics and personal growth.
+            </p>
+            <p class="about-text">
+              My academic journey has allowed me to delve into a wide array of Computer Science disciplines, including web application development, database management, cloud computing, artificial intelligence, and networking systems. Through various projects, I have not only refined my technical expertise but also demonstrated my ability to apply knowledge creatively and effectively.
+            </p>
+            <p class="about-text">
+              I am eager to continue expanding my skills and exploring new opportunities to contribute to and thrive in the ever-evolving field of technology. Thank you for taking the time to learn more about me, and I hope you enjoy your visit!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="case-study">
+    <div class="container">
+      <div class="section-header">
+        <p class="sub-heading">Featured Projects</p>
+        <h1 class="heading">My Portfolio</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="client-box">
+            <h1 class="title">MinesweeperAI</h1>
+            <p class="tag">Python, AI</p>
+            <div class="description">
+              An AI agent that plays Minesweeper using logical inference and probability calculations. Implements constraint satisfaction and knowledge representation to make informed decisions.
+            </div>
+            <div class="links">
+              <a href="https://github.com/yourusername/minesweeper-ai" target="_blank">View Project →</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="client-box">
+            <h1 class="title">Neural Style Transfer</h1>
+            <p class="tag">Python, Deep Learning</p>
+            <div class="description">
+              Implementation of neural style transfer using PyTorch. Combines content and style images to create artistic transformations using convolutional neural networks.
+            </div>
+            <div class="links">
+              <a href="https://github.com/yourusername/neural-style" target="_blank">View Project →</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="client-box">
+            <h1 class="title">Portfolio Website</h1>
+            <p class="tag">HTML, CSS, JavaScript</p>
+            <div class="description">
+              A modern portfolio website featuring Three.js animations, smooth scrolling, and responsive design. Built with HTML5, CSS3, and vanilla JavaScript.
+            </div>
+            <div class="links">
+              <a href="https://github.com/yourusername/portfolio" target="_blank">View Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="skills" class="testimonial">
+    <div class="container">
+      <div class="section-header">
+        <p class="sub-heading">Experience & Skills</p>
+        <h1 class="heading">What I Do</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimonial-box">
+            <h1>Software Development</h1>
+            <p class="duration">5+ Years Experience</p>
+            <div class="description">
+              <p>Proficient in multiple programming languages including Python, JavaScript, and Java. Strong experience in web development, machine learning, and software architecture.</p>
+              <p>Key skills:</p>
+              <p>• Full-stack web development<br>• API design and implementation<br>• Database management<br>• Cloud services (AWS, GCP)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-box">
+            <h1>Machine Learning</h1>
+            <p class="duration">3+ Years Experience</p>
+            <div class="description">
+              <p>Experienced in developing and deploying machine learning models. Skilled in deep learning frameworks and data analysis.</p>
+              <p>Key skills:</p>
+              <p>• Neural Networks<br>• Computer Vision<br>• Natural Language Processing<br>• TensorFlow & PyTorch</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-box">
+            <h1>UI/UX Design</h1>
+            <p class="duration">2+ Years Experience</p>
+            <div class="description">
+              <p>Creating intuitive and beautiful user interfaces. Focus on user experience and responsive design principles.</p>
+              <p>Key skills:</p>
+              <p>• Responsive Design<br>• User Interface Design<br>• Prototyping<br>• Animation & Interaction</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="stats">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center stat-box">
+          <h1 class="purple"><span class="counter">3.2</span>k</h1>
+          <h3>Hours</h3>
+        </div>
+        <div class="col-md-4 text-center stat-box">
+          <h1 class="blue counter">217</h1>
+          <h3>Projects</h3>
+        </div>
+        <div class="col-md-4 text-center stat-box">
+          <h1 class="pink"><span class="counter">18.3</span>k</h1>
+          <h3>Cups of Coffee</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Banner -->
+  <section id="contact" class="contact-banner">
+    <div class="container text-center">
+      <h1>Let's Work Together</h1>
+      <div class="contact-form-container">
+        <form id="contactForm" class="contact-form" action="https://getform.io/f/azyyjryb" method="POST">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required placeholder="Your Name" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required placeholder="Your Email" class="form-control">
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" required placeholder="Your Message" class="form-control" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-lg btn-primary submit-btn">
+            <span class="btn-text">Send Message</span>
+            <div class="success-animation">
+              <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+              </svg>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <h1>Swikrit <span>Bhattarai</span></h1>
+      <ul class="social-links">
+        <li><a href="https://github.com/Swikritbh/Swikritbh" target="_blank"><img src="assets/github.png"></a></li>
+        <li><a href="https://www.linkedin.com/in/swikrit-bhattarai-bb29ba289/" target="_blank"><img src="assets/icon.png" alt="Social Media"></a></li>
+      </ul>
+      <div class="copyright">
+        <p>SWIKRIT BHATTARAI 2025 &copy; ALL RIGHTS RESERVED</p>
+        <p>motherfucker le ni banayo la portfolio. Get going</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      // Initialize EmailJS with your public key
+      emailjs.init("YOUR_PUBLIC_KEY");
+    })();
+  </script>
+  <script src="js/main.js"></script>
+  <script src="js/three-background.js"></script>
+</body>
+</html>
