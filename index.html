@@ -4,7 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Swikrit</title>
+  <meta name="description" content="Swikrit Bhattarai's Portfolio - Computer Science Student & Software Developer from Nepal. Explore my projects in AI, Machine Learning, and Web Development.">
+  <meta name="keywords" content="Swikrit Bhattarai, Portfolio, Software Developer, Computer Science, AI, Machine Learning">
+  <meta name="author" content="Swikrit Bhattarai">
+  <meta name="theme-color" content="#1a202c">
+  <title>Swikrit Bhattarai - Software Developer & CS Student</title>
 
   <!-- Add favicon -->
   <link rel="icon" type="image/png" href="assets/letter-s.png">
@@ -24,10 +28,17 @@
     <canvas class="hero-canvas"></canvas>
   </div>
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
   <!-- Navigation -->
   <nav>
     <div class="container">
-      <button class="menu-toggle" id="menu-toggle">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
@@ -50,19 +61,20 @@
           <div class="hero-image">
             <div class="hero-shape"></div>
             <div class="profile-img">
-              <img src="assets/first_img.jpeg" alt="Profile Image">
+              <img src="assets/first_img.jpeg" alt="Swikrit Bhattarai - Profile Image">
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="hero-text">
-            <h1><span>Hi, I am</span><br>Swikrit Bhattarai</h1>
-            <h3>Software Developer | Computer Science Student</h3>
-            <a href="assets/resume.pdf" class="btn btn-lg btn-primary" target="_blank">View Resume</a>
+            <h1><span>Hi, I am</span><br><span id="typed-name"></span></h1>
+            <h3 class="role-text"><span id="typed-role"></span></h3>
+            <p class="hero-subtitle">Passionate about building intelligent solutions with AI/ML and creating beautiful web experiences</p>
+            <a href="assets/resume.pdf" class="btn btn-lg btn-primary magnetic-btn" target="_blank" rel="noopener noreferrer">📄 View Resume</a>
             <h3 class="connect-heading">Connect with me</h3>
             <ul class="social-links">
-              <li><a href="https://github.com/Swikritbh/Swikritbh" target="_blank"><img src="assets/github.png"></a></li>
-              <li><a href="https://www.linkedin.com/in/swikrit-bhattarai-bb29ba289/" target="_blank"><img src="assets/icon.png" alt="Social Media"></a></li>
+              <li><a href="https://github.com/Swikritbh" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="assets/github.png" alt="GitHub"></a></li>
+              <li><a href="https://www.linkedin.com/in/swikrit-bhattarai-bb29ba289/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/icon.png" alt="LinkedIn"></a></li>
             </ul>
           </div>
         </div>
@@ -84,10 +96,10 @@
               I am Swikrit Bhattarai, a senior at the University of Louisiana at Monroe, pursuing a Bachelor's degree in Computer Science. As an international student from Nepal, I bring a unique global perspective, coupled with strong communication skills, a dynamic approach, and a commitment to excellence in both academics and personal growth.
             </p>
             <p class="about-text">
-              My academic journey has allowed me to delve into a wide array of Computer Science disciplines, including web application development, database management, cloud computing, artificial intelligence, and networking systems. Through various projects, I have not only refined my technical expertise but also demonstrated my ability to apply knowledge creatively and effectively.
+              My academic journey has allowed me to delve into a wide array of Computer Science disciplines, including web application development, database management, cloud computing, artificial intelligence, and networking systems. Through various projects, I have refined my technical expertise and demonstrated my ability to apply knowledge creatively and effectively to solve real-world problems.
             </p>
             <p class="about-text">
-              I am eager to continue expanding my skills and exploring new opportunities to contribute to and thrive in the ever-evolving field of technology. Thank you for taking the time to learn more about me, and I hope you enjoy your visit!
+              I am eager to continue expanding my skills and exploring new opportunities to contribute to and thrive in the ever-evolving field of technology. When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the community.
             </p>
           </div>
         </div>
@@ -105,37 +117,55 @@
       <div class="row">
         <div class="col-md-4">
           <div class="client-box">
-            <h1 class="title">MinesweeperAI</h1>
-            <p class="tag">Python, AI</p>
+            <div class="project-badge">AI</div>
+            <h2 class="title">MinesweeperAI</h2>
+            <p class="tag">Python • AI • Algorithms</p>
             <div class="description">
-              An AI agent that plays Minesweeper using logical inference and probability calculations. Implements constraint satisfaction and knowledge representation to make informed decisions.
+              An intelligent AI agent that plays Minesweeper using logical inference and probability calculations. Implements constraint satisfaction and knowledge representation to make optimal decisions in uncertain environments.
+            </div>
+            <div class="tech-stack">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">AI</span>
+              <span class="tech-badge">Logic</span>
             </div>
             <div class="links">
-              <a href="https://github.com/yourusername/minesweeper-ai" target="_blank">View Project →</a>
+              <a href="https://github.com/Swikritbh" target="_blank" rel="noopener noreferrer">View Project →</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="client-box">
-            <h1 class="title">Neural Style Transfer</h1>
-            <p class="tag">Python, Deep Learning</p>
+            <div class="project-badge">ML</div>
+            <h2 class="title">Neural Style Transfer</h2>
+            <p class="tag">Python • Deep Learning • PyTorch</p>
             <div class="description">
-              Implementation of neural style transfer using PyTorch. Combines content and style images to create artistic transformations using convolutional neural networks.
+              Implementation of neural style transfer using PyTorch and convolutional neural networks. Transforms images into artistic styles by combining content and style representations for creative visual effects.
+            </div>
+            <div class="tech-stack">
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">CNN</span>
+              <span class="tech-badge">Deep Learning</span>
             </div>
             <div class="links">
-              <a href="https://github.com/yourusername/neural-style" target="_blank">View Project →</a>
+              <a href="https://github.com/Swikritbh" target="_blank" rel="noopener noreferrer">View Project →</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="client-box">
-            <h1 class="title">Portfolio Website</h1>
-            <p class="tag">HTML, CSS, JavaScript</p>
+            <div class="project-badge">WEB</div>
+            <h2 class="title">Portfolio Website</h2>
+            <p class="tag">HTML • CSS • JavaScript • Three.js</p>
             <div class="description">
-              A modern portfolio website featuring Three.js animations, smooth scrolling, and responsive design. Built with HTML5, CSS3, and vanilla JavaScript.
+              A modern, responsive portfolio website featuring Three.js 3D animations, smooth scrolling transitions, and a sleek glassmorphic design. Built with vanilla JavaScript and optimized for all devices.
+            </div>
+            <div class="tech-stack">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">Three.js</span>
             </div>
             <div class="links">
-              <a href="https://github.com/yourusername/portfolio" target="_blank">View Project →</a>
+              <a href="https://github.com/Swikritbh/Swikritbh" target="_blank" rel="noopener noreferrer">View Project →</a>
             </div>
           </div>
         </div>
@@ -147,40 +177,67 @@
   <section id="skills" class="testimonial">
     <div class="container">
       <div class="section-header">
-        <p class="sub-heading">Experience & Skills</p>
+        <p class="sub-heading">Expertise & Skills</p>
         <h1 class="heading">What I Do</h1>
       </div>
       <div class="row">
         <div class="col-md-4">
           <div class="testimonial-box">
-            <h1>Software Development</h1>
+            <h2>💻 Software Development</h2>
             <p class="duration">5+ Years Experience</p>
             <div class="description">
-              <p>Proficient in multiple programming languages including Python, JavaScript, and Java. Strong experience in web development, machine learning, and software architecture.</p>
-              <p>Key skills:</p>
-              <p>• Full-stack web development<br>• API design and implementation<br>• Database management<br>• Cloud services (AWS, GCP)</p>
+              <p>Proficient in multiple programming languages and frameworks. Strong experience in building scalable applications, designing clean architecture, and implementing best practices.</p>
+              <p class="skills-label">Key skills:</p>
+              <div class="skills-grid">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Databases</span>
+                <span class="skill-tag">Cloud Services</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="testimonial-box">
-            <h1>Machine Learning</h1>
+            <h2>🤖 Machine Learning & AI</h2>
             <p class="duration">3+ Years Experience</p>
             <div class="description">
-              <p>Experienced in developing and deploying machine learning models. Skilled in deep learning frameworks and data analysis.</p>
-              <p>Key skills:</p>
-              <p>• Neural Networks<br>• Computer Vision<br>• Natural Language Processing<br>• TensorFlow & PyTorch</p>
+              <p>Experienced in developing and deploying machine learning models. Skilled in deep learning frameworks, data analysis, and creating intelligent systems.</p>
+              <p class="skills-label">Key skills:</p>
+              <div class="skills-grid">
+                <span class="skill-tag">Neural Networks</span>
+                <span class="skill-tag">Computer Vision</span>
+                <span class="skill-tag">NLP</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Pandas</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="testimonial-box">
-            <h1>UI/UX Design</h1>
+            <h2>🎨 UI/UX & Web Design</h2>
             <p class="duration">2+ Years Experience</p>
             <div class="description">
-              <p>Creating intuitive and beautiful user interfaces. Focus on user experience and responsive design principles.</p>
-              <p>Key skills:</p>
-              <p>• Responsive Design<br>• User Interface Design<br>• Prototyping<br>• Animation & Interaction</p>
+              <p>Creating intuitive and beautiful user interfaces with focus on user experience and accessibility. Skilled in modern design trends and responsive development.</p>
+              <p class="skills-label">Key skills:</p>
+              <div class="skills-grid">
+                <span class="skill-tag">Responsive Design</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">Bootstrap</span>
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Animations</span>
+                <span class="skill-tag">Accessibility</span>
+                <span class="skill-tag">UX Design</span>
+                <span class="skill-tag">Prototyping</span>
+              </div>
             </div>
           </div>
         </div>
@@ -194,15 +251,15 @@
       <div class="row">
         <div class="col-md-4 text-center stat-box">
           <h1 class="purple"><span class="counter">3.2</span>k</h1>
-          <h3>Hours</h3>
+          <h3>Coding Hours</h3>
         </div>
         <div class="col-md-4 text-center stat-box">
-          <h1 class="blue counter">217</h1>
-          <h3>Projects</h3>
+          <h1 class="blue counter">50</h1>
+          <h3>Projects Completed</h3>
         </div>
         <div class="col-md-4 text-center stat-box">
           <h1 class="pink"><span class="counter">18.3</span>k</h1>
-          <h3>Cups of Coffee</h3>
+          <h3>Cups of Coffee ☕</h3>
         </div>
       </div>
     </div>
@@ -212,16 +269,20 @@
   <section id="contact" class="contact-banner">
     <div class="container text-center">
       <h1>Let's Work Together</h1>
+      <p class="contact-subtitle">Have a project in mind? Let's create something amazing!</p>
       <div class="contact-form-container">
         <form id="contactForm" class="contact-form" action="https://getform.io/f/azyyjryb" method="POST">
           <div class="form-group">
-            <input type="text" id="name" name="name" required placeholder="Your Name" class="form-control">
+            <input type="text" id="name" name="name" required placeholder="Your Name" class="form-control" minlength="2">
+            <span class="form-error" id="nameError"></span>
           </div>
           <div class="form-group">
             <input type="email" id="email" name="email" required placeholder="Your Email" class="form-control">
+            <span class="form-error" id="emailError"></span>
           </div>
           <div class="form-group">
-            <textarea id="message" name="message" required placeholder="Your Message" class="form-control" rows="4"></textarea>
+            <textarea id="message" name="message" required placeholder="Your Message" class="form-control" rows="4" minlength="10"></textarea>
+            <span class="form-error" id="messageError"></span>
           </div>
           <button type="submit" class="btn btn-lg btn-primary submit-btn">
             <span class="btn-text">Send Message</span>
@@ -242,8 +303,8 @@
     <div class="container text-center">
       <h1>Swikrit <span>Bhattarai</span></h1>
       <ul class="social-links">
-        <li><a href="https://github.com/Swikritbh/Swikritbh" target="_blank"><img src="assets/github.png"></a></li>
-        <li><a href="https://www.linkedin.com/in/swikrit-bhattarai-bb29ba289/" target="_blank"><img src="assets/icon.png" alt="Social Media"></a></li>
+        <li><a href="https://github.com/Swikritbh" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="assets/github.png" alt="GitHub"></a></li>
+        <li><a href="https://www.linkedin.com/in/swikrit-bhattarai-bb29ba289/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/icon.png" alt="LinkedIn"></a></li>
       </ul>
       <div class="copyright">
         <p>SWIKRIT BHATTARAI 2025 &copy; ALL RIGHTS RESERVED</p>
@@ -252,20 +313,28 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-2.1.1.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/scrollreveal.min.js"></script>
-  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/swiper.jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  
+  <!-- Animation Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  
   <script>
     (function() {
       // Initialize EmailJS with your public key
-      emailjs.init("YOUR_PUBLIC_KEY");
+      // emailjs.init("YOUR_PUBLIC_KEY");
     })();
   </script>
   <script src="js/main.js"></script>
-  <script src="js/three-background.js"></script>
+  <script src="js/animations.js"></script>
 </body>
 </html>
