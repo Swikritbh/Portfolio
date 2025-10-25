@@ -200,72 +200,122 @@ if (typeof gsap !== 'undefined') {
   // Fade in and slide up sections
   gsap.utils.toArray('section').forEach((section, i) => {
     if (i > 0) { // Skip hero section
-      gsap.from(section, {
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          end: 'top 20%',
-          toggleActions: 'play none none reverse'
+      gsap.fromTo(section,
+        {
+          opacity: 0,
+          y: 50
         },
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: 'power2.out'
-      });
+        {
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 85%',
+            end: 'top 20%',
+            toggleActions: 'play none none reverse',
+            once: true
+          },
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power2.out'
+        }
+      );
     }
   });
 
   // Stagger animation for portfolio items
-  gsap.from('.client-box', {
-    scrollTrigger: {
-      trigger: '.case-study',
-      start: 'top 70%',
-    },
-    opacity: 0,
-    y: 80,
-    rotation: 5,
-    stagger: 0.2,
-    duration: 0.8,
-    ease: 'back.out(1.7)'
+  gsap.utils.toArray('.client-box').forEach((box, i) => {
+    gsap.fromTo(box, 
+      {
+        opacity: 0,
+        y: 80,
+        rotation: 5
+      },
+      {
+        scrollTrigger: {
+          trigger: box,
+          start: 'top 85%',
+          end: 'top 20%',
+          toggleActions: 'play none none reverse',
+          once: true
+        },
+        opacity: 1,
+        y: 0,
+        rotation: 0,
+        duration: 0.8,
+        delay: i * 0.2,
+        ease: 'back.out(1.7)'
+      }
+    );
   });
 
   // Stagger animation for skill boxes
-  gsap.from('.testimonial-box', {
-    scrollTrigger: {
-      trigger: '.testimonial',
-      start: 'top 70%',
-    },
-    opacity: 0,
-    y: 60,
-    stagger: 0.15,
-    duration: 0.8,
-    ease: 'power3.out'
+  gsap.utils.toArray('.testimonial-box').forEach((box, i) => {
+    gsap.fromTo(box,
+      {
+        opacity: 0,
+        y: 60
+      },
+      {
+        scrollTrigger: {
+          trigger: box,
+          start: 'top 85%',
+          end: 'top 20%',
+          toggleActions: 'play none none reverse',
+          once: true
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        delay: i * 0.15,
+        ease: 'power3.out'
+      }
+    );
   });
 
   // Skill tags pop-in animation
-  gsap.from('.skill-tag', {
-    scrollTrigger: {
-      trigger: '.testimonial',
-      start: 'top 60%',
-    },
-    opacity: 0,
-    scale: 0,
-    stagger: 0.05,
-    duration: 0.5,
-    ease: 'back.out(2)'
+  gsap.utils.toArray('.skill-tag').forEach((tag, i) => {
+    gsap.fromTo(tag,
+      {
+        opacity: 0,
+        scale: 0
+      },
+      {
+        scrollTrigger: {
+          trigger: tag,
+          start: 'top 90%',
+          toggleActions: 'play none none reverse',
+          once: true
+        },
+        opacity: 1,
+        scale: 1,
+        duration: 0.5,
+        delay: i * 0.05,
+        ease: 'back.out(2)'
+      }
+    );
   });
 
   // Stats counter animation with scale
-  gsap.from('.stat-box', {
-    scrollTrigger: {
-      trigger: '.stats',
-      start: 'top 75%',
-    },
-    opacity: 0,
-    scale: 0.5,
-    stagger: 0.1,
-    duration: 0.7,
-    ease: 'elastic.out(1, 0.5)'
+  gsap.utils.toArray('.stat-box').forEach((box, i) => {
+    gsap.fromTo(box,
+      {
+        opacity: 0,
+        scale: 0.5
+      },
+      {
+        scrollTrigger: {
+          trigger: box,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+          once: true
+        },
+        opacity: 1,
+        scale: 1,
+        duration: 0.7,
+        delay: i * 0.1,
+        ease: 'elastic.out(1, 0.5)'
+      }
+    );
   });
 
   // Profile image float animation
@@ -300,19 +350,26 @@ if (typeof gsap !== 'undefined') {
   });
 
   // Tech badges animation
-  const techBadges = document.querySelectorAll('.tech-badge');
-  techBadges.forEach((badge, i) => {
-    gsap.from(badge, {
-      scrollTrigger: {
-        trigger: badge,
-        start: 'top 90%',
+  gsap.utils.toArray('.tech-badge').forEach((badge, i) => {
+    gsap.fromTo(badge,
+      {
+        opacity: 0,
+        x: -30
       },
-      opacity: 0,
-      x: -30,
-      duration: 0.5,
-      delay: i * 0.05,
-      ease: 'power2.out'
-    });
+      {
+        scrollTrigger: {
+          trigger: badge,
+          start: 'top 90%',
+          toggleActions: 'play none none reverse',
+          once: true
+        },
+        opacity: 1,
+        x: 0,
+        duration: 0.5,
+        delay: i * 0.05,
+        ease: 'power2.out'
+      }
+    );
   });
 
   // Project badges floating animation
@@ -326,41 +383,71 @@ if (typeof gsap !== 'undefined') {
   });
 
   // Text reveal animation for about section
-  gsap.from('.about-text', {
-    scrollTrigger: {
-      trigger: '.about-section',
-      start: 'top 70%',
-    },
-    opacity: 0,
-    y: 30,
-    stagger: 0.2,
-    duration: 0.8,
-    ease: 'power2.out'
+  gsap.utils.toArray('.about-text').forEach((text, i) => {
+    gsap.fromTo(text,
+      {
+        opacity: 0,
+        y: 30
+      },
+      {
+        scrollTrigger: {
+          trigger: text,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+          once: true
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        delay: i * 0.2,
+        ease: 'power2.out'
+      }
+    );
   });
 
   // Section headers animation
-  gsap.from('.section-header', {
-    scrollTrigger: {
-      trigger: '.section-header',
-      start: 'top 80%',
-    },
-    opacity: 0,
-    y: 50,
-    duration: 0.8,
-    ease: 'power3.out'
+  gsap.utils.toArray('.section-header').forEach(header => {
+    gsap.fromTo(header,
+      {
+        opacity: 0,
+        y: 50
+      },
+      {
+        scrollTrigger: {
+          trigger: header,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+          once: true
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+      }
+    );
   });
 
   // Contact form elements animation
-  gsap.from('.form-group', {
-    scrollTrigger: {
-      trigger: '.contact-form',
-      start: 'top 75%',
-    },
-    opacity: 0,
-    x: -50,
-    stagger: 0.15,
-    duration: 0.6,
-    ease: 'power2.out'
+  gsap.utils.toArray('.form-group').forEach((group, i) => {
+    gsap.fromTo(group,
+      {
+        opacity: 0,
+        x: -50
+      },
+      {
+        scrollTrigger: {
+          trigger: '.contact-form',
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+          once: true
+        },
+        opacity: 1,
+        x: 0,
+        duration: 0.6,
+        delay: i * 0.15,
+        ease: 'power2.out'
+      }
+    );
   });
 }
 
